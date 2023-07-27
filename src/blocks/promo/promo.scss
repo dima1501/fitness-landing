@@ -1,0 +1,218 @@
+.promo {
+  position: relative;
+  margin-bottom: 83px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -600px;
+    width: 633px;
+    height: 711px;
+    background: linear-gradient(71deg, #FFD2FF 0%, rgba(236, 238, 238, 0.00) 100%);
+    box-shadow: 0px -9px 114.38384246826172px 0px #F8DCF8 inset;
+    transform: translateY(-50%);
+    border-radius: 711px;
+    filter: blur(57px);
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    margin-top: -37px;
+    margin-bottom: 127px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+
+
+    @media (min-width: 768px) {
+      flex-shrink: 0;
+      width: 66%;
+    }
+
+    @media (min-width: 1440px) {
+      padding-top: 15px;
+    }
+
+    &-title {
+      margin-bottom: 30px;
+      font-size: clampy(18px, 40px, 320px, 768px);
+
+      @media (min-width: 768px) {
+        margin-bottom: 40px;
+        padding-right: 25px;
+        font-size: clampy(27px, 40px, 768px, 1440px);
+      }
+
+      @media (min-width: 1024px) {
+        padding-right: 0;
+      }
+    }
+
+    &-text {
+      margin-bottom: 13px;
+      font-size: clampy(16px, 20px, 768px, 1440px);
+      line-height: 132.4%;
+
+      @media (min-width: 768px) {
+        width: 75%;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__pic {
+    position: relative;
+    margin: 10px auto 0;
+    width: 366px;
+    transform: translate(-32px, 0);
+
+    @media (min-width: 768px) {
+      margin: 0;
+      width: auto;
+      transform: translate(-67px, 10px);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      z-index: -1;
+      width: 296px;
+      height: 111px;
+      background: radial-gradient(50% 50.00% at 50% 50.00%, #858585 6.44%, rgba(243, 243, 243, 0.47) 100%);
+      opacity: 0.8;
+      transform: translateX(-50%) rotate(9.927deg);
+      border-radius: 296px;
+
+      @media (min-width: 768px) {
+        bottom: 62px;
+        left: 52%;
+        opacity: 1;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 40%;
+      left: 45%;
+      z-index: -1;
+      width: 250px;
+      height: 250px;
+      background: linear-gradient(71deg, #FFFFFF 0%, rgba(236, 238, 238, 0.00) 100%);
+      transform: translate(-50%, -50%);
+      border-radius: 426px;
+      filter: blur(3px);
+
+      @media (min-width: 768px) {
+        top: 46%;
+        width: 426px;
+        height: 426px;
+      }
+    }
+
+    &-main {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        margin-right: 0;
+        margin-left: -20px;
+        width: clampy(423px, 623px, 768px, 1440px);
+      }
+    }
+
+    &-decor-results {
+      position: absolute;
+      top: 31px;
+      right: 54px;
+      width: 93px;
+
+      @media (min-width: 768px) {
+        top: 44px;
+        right: 75px;
+        width: 100px;
+      }
+
+      @media (min-width: 1024px) {
+        top: 54px;
+        right: 69px;
+        width: 129px;
+      }
+
+      @media (min-width: 1280px) {
+        top: 71px;
+        right: 45px;
+        width: auto;
+      }
+    }
+
+
+    &-decor-heart-rate {
+      position: absolute;
+      top: 202px;
+      left: 31px;
+      z-index: 2;
+      width: 101px;
+
+      @media (min-width: 768px) {
+        top: 302px;
+        left: -46px;
+        width: 140px;
+      }
+
+      @media (min-width: 1024px) {
+        top: 352px;
+        left: -46px;
+        width: 160px;
+      }
+
+      @media (min-width: 1280px) {
+        top: 402px;
+        left: -66px;
+        width: auto;
+      }
+
+      @media (min-width: 1366px) {
+        top: 412px;
+        left: -46px;
+      }
+    }
+
+    &-decor-star_1 {
+      position: absolute;
+      top: 254px;
+      right: 46px;
+      width: 38px;
+
+      @media (min-width: 768px) {
+        top: 445px;
+        right: 88px;
+        width: auto;
+      }
+    }
+
+    &-decor-star_2 {
+      position: absolute;
+      top: 104px;
+      left: 45px;
+      width: 45px;
+
+      @media (min-width: 768px) {
+        top: 101px;
+        left: 40px;
+        width: auto;
+      }
+    }
+  }
+}

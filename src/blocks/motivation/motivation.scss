@@ -1,0 +1,256 @@
+.motivation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 55px 0 31px;
+
+  @media (min-width: 768px) {
+    padding: 200px 0 163px 0;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 183px 0 163px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    left: 50%;
+    z-index: -1;
+    margin-right: -50vw;
+    margin-left: -50vw;
+    width: 100vw;
+    height: 1079px;
+    background-image: url('../img/motivation_bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.05;
+    transform: translateY(-50%);
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    padding: 0 15px;
+    max-width: 373px;
+    font-size: clampy(19px, 23px, 320px, 768px);
+    line-height: 140%;
+
+    @media (min-width: 768px) {
+      margin-bottom: 45px;
+      padding: 0;
+      max-width: 100%;
+      font-size: clampy(27px, 40px, 768px, 1440px);
+      line-height: 139%;
+    }
+  }
+
+  &__decor {
+
+    &-item {
+      position: absolute;
+    }
+
+    &-item._1 {
+      top: 50%;
+      left: 50%;
+      width: 106px;
+      transition: transform .2s;
+
+      transform: translate(-180%, -187%);
+
+      @media (min-width: 768px) {
+        top: -50px;
+        left: 0;
+        width: auto;
+        transform: none;
+      }
+
+      @media (min-width: 1366px) {
+        top: -26px;
+        left: 51px;
+      }
+    }
+
+    &-item._2 {
+
+      top: 50%;
+      left: 50%;
+      width: 108px;
+      transition: transform .3s;
+
+      transform: translate(46%, -191%);
+
+      @media (min-width: 768px) {
+        top: -104px;
+        right: 0;
+        left: auto;
+        width: auto;
+        transform: none;
+      }
+
+      @media (min-width: 1366px) {
+        right: 325px;
+      }
+    }
+
+    &-item._3 {
+
+      top: 50%;
+      left: 50%;
+      width: 116px;
+      transition: transform .4s;
+
+      transform: translate(106%, -38%);
+
+      @media (min-width: 768px) {
+        top: auto;
+        right: -140px;
+        bottom: 40px;
+        left: auto;
+        width: auto;
+        transform: none;
+      }
+
+      @media (min-width: 1366px) {
+        right: -40px;
+        bottom: 141px;
+      }
+    }
+
+    &-item._4 {
+
+      top: 50%;
+      left: 50%;
+      width: 116px;
+      transition: transform .5s;
+
+      transform: translate(126%, 40%);
+
+      @media (min-width: 768px) {
+        top: auto;
+        right: 64px;
+        bottom: -55px;
+        left: auto;
+        width: auto;
+        transform: none;
+      }
+
+      @media (min-width: 1366px) {
+        right: 164px;
+        bottom: 25px;
+      }
+    }
+
+    &-item._5 {
+
+      top: 50%;
+      left: 50%;
+      width: 106px;
+
+      transition: transform .6s;
+
+      transform: translate(-205%, -8%);
+
+      @media (min-width: 768px) {
+        top: auto;
+        bottom: -50px;
+        left: -30px;
+        width: auto;
+        transform: none;
+      }
+
+      @media (min-width: 1366px) {
+        bottom: 57px;
+        left: -30px;
+      }
+    }
+  }
+
+  &._collapsed {
+
+    .motivation__decor-item._1 {
+      transform: translate(-133%, -108%);
+
+      @media (min-width: 768px) {
+        transform: translate(65px, 81px);
+      }
+
+      @media (min-width: 1024px) {
+        transform: translate(116px, 107px);
+      }
+
+      @media (min-width: 1366px) {
+        transform: translate(270px, 58px);
+      }
+    }
+
+    .motivation__decor-item._2 {
+      transform: translate(23px, -99px);
+
+      @media (min-width: 768px) {
+        transform: translate(-62px, 142px);
+      }
+
+      @media (min-width: 1024px) {
+        transform: translate(-232px, 153px);
+      }
+
+      @media (min-width: 1366px) {
+        transform: translate(-77px, 102px);
+      }
+    }
+
+    .motivation__decor-item._3 {
+      transform: translate(67px, -32px);
+
+      @media (min-width: 768px) {
+        transform: translate(-132px, -55px);
+      }
+
+      @media (min-width: 1024px) {
+        transform: translate(-232px, -47px);
+      }
+
+      @media (min-width: 1366px) {
+        transform: translate(-232px, -16px);
+      }
+    }
+
+    .motivation__decor-item._4 {
+      transform: translate(20px, 66px);
+
+      @media (min-width: 768px) {
+        transform: translate(-26px, -58px);
+      }
+
+      @media (min-width: 1024px) {
+        transform: translate(-130px, -58px);
+      }
+
+      @media (min-width: 1366px) {
+        transform: translate(-230px, -8px);
+      }
+    }
+
+    .motivation__decor-item._5 {
+      transform: translate(-177px, 22px);
+
+      @media (min-width: 768px) {
+        transform: translate(81px, -55px);
+      }
+
+      @media (min-width: 1024px) {
+        transform: translate(170px, -86px);
+      }
+
+      @media (min-width: 1366px) {
+        transform: translate(271px, -25px);
+      }
+    }
+  }
+}

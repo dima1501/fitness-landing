@@ -1,0 +1,56 @@
+.reasons {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 71px;
+    right: -122px;
+    z-index: -1;
+    width: 518.128px;
+    height: 518.128px;
+    background: linear-gradient(71deg, rgba(255, 255, 255, 0.94) 0%, rgba(236, 238, 238, 0.00) 100%);
+    box-shadow: 0px 70.65387725830078px 99.43878936767578px 0px rgba(104, 213, 199, 0.50) inset;
+    border-radius: 518.128px;
+    filter: blur(51px);
+  }
+
+  @media (min-width: 1024px) {
+    .glide__slides {
+      display: flex;
+      gap: 20px;
+    }
+
+    .glide__slide {
+      flex: 1;
+
+      &:nth-child(even) {
+        margin-top: 64px;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 32px;
+
+    @media (min-width: 1024px) {
+      padding-top: 78px;
+    }
+  }
+
+  &__card {
+    @media (min-width: 1024px) {
+      flex: 1;
+
+      &:nth-child(even) {
+        margin-top: 64px;
+      }
+    }
+  }
+
+  &__bullets {
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+}

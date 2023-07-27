@@ -1,0 +1,13 @@
+mixin subscribe(modifier)
+  section.subscribe#subscribe
+    .subscribe__promo
+      picture.subscribe__promo-pic
+        source(srcset="./img/subscribe_pic@2x.webp 2x, ./img/subscribe_pic.webp 1x", type="image/webp")
+        source(srcset="./img/subscribe_pic@2x.png 2x, ./img/subscribe_pic.png 1x", type="image/png")
+        img(src="./img/subscribe_pic.png", alt="Welcome Image" loading="lazy")
+      .subscribe__promo-note Попробуйте первую неделю всего за __Р.
+
+    .subscribe__content 
+      h2.subscribe__title Получите подтянутое и здоровое тело за короткое время!
+      p.subscribe__text Курс даст вам не только здоровое тело, но и уверенность в себе. Занимайтесь с удовольствием и станьте лучшей версией себя
+      +subscribe-form

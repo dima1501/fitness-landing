@@ -1,0 +1,20 @@
+mixin promo(modifier)
+  section.promo(data-aos="fade-in")
+    .promo__content
+      h2.promo__content-title
+        | Хотите улучшить свою форму и выглядеть впечатляюще, занимаясь 
+        span._bordered по 15–20 минут
+        |  в день?
+      p.promo__content-text Тогда наш курс для вас! Наши профессиональные тренеры разработали эффективную программу тренировок, которая поможет достичь вам желаемых результатов.
+      p.promo__content-text Мы используем современные методы тренировок и подборки упражнений, которые позволят быстро и безопасно достигнуть поставленных целей. Курс нацелен на комплексную прокачку всего тела: пресса, бицепсов, дельт, ног, спины и других групп мышц
+    
+    .promo__pic
+      .promo__pic-decor
+        img(src="./img/results.svg", alt="" loading="lazy" data-aos="fade-left" data-aos-offset="0").promo__pic-decor-results
+        img(src="./img/heart-rate.svg", alt="" loading="lazy" data-aos="fade-right" data-aos-offset="0").promo__pic-decor-heart-rate
+        img(src="./img/star_1.svg", alt="" loading="lazy").promo__pic-decor-star_1
+        img(src="./img/star_2.svg", alt="" loading="lazy").promo__pic-decor-star_2
+      picture.promo__pic-main
+          source(srcset=`./img/promo_main@2x.webp 2x, ./img/promo_main.webp 1x`, type="image/webp")
+          source(srcset=`./img/promo_main@2x.png 2x, ./img/promo_main.png 1x`, type="image/png")
+          img(src=`./img/promo_main.png`, alt="Welcome Image")

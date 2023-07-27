@@ -1,0 +1,49 @@
+.info-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 17px 10px 17px 84px;
+  height: 100%;
+  background: #FFFFFF;
+  border-radius: 22px;
+
+  @media (min-width: 1024px) {
+    padding: 30px 10px 30px 110px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 30px 20px 30px 149px;
+  }
+
+  &__pic {
+    position: absolute;
+    top: 50%;
+    left: -6px;
+    width: 91px;
+    transform: translateY(-50%);
+
+    @media (min-width: 768px) {
+      left: 0;
+      width: 90px;
+    }
+
+    @media (min-width: 1024px) {
+      width: 110px;
+    }
+
+    @media (min-width: 1440px) {
+      width: auto;
+    }
+  }
+
+  &__text {
+    font-size: clampy(14px, 20px, 768px, 1440px);
+    line-height: 132.4%;
+    font-weight: 600;
+
+    span {
+      display: block;
+      font-weight: 400;
+    }
+  }
+}

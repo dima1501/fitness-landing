@@ -1,0 +1,28 @@
+mixin reasons(modifier)
+  section.reasons
+    h2.center 
+      | Курс для вас, 
+      span если...
+
+    .reasons__content
+      .glide#reasons-slider
+        .glide__track(data-glide-el="track")
+          ul.glide__slides
+            li.glide__slide
+              .reasons__card(data-aos="fade-up" data-aos-offset="200" data-aos-duration="500")
+                +reason-card("#специально для тебя", "Вы мечтаете о красивом и подтянутом теле", "./img/reasons_1", "Welcome Image")
+            li.glide__slide
+              .reasons__card(data-aos="fade-up" data-aos-offset="120" data-aos-delay="150" data-aos-duration="500")
+                +reason-card("#специально для тебя", "Вы тяжело переносите физические нагрузку", "./img/reasons_2", "Welcome Image")
+            li.glide__slide
+              .reasons__card(data-aos="fade-up" data-aos-offset="200" data-aos-duration="500")
+                +reason-card("#специально для тебя", "Хотите внедрить регулярные физические нагрузки в свою жизнь", "./img/reasons_3", "Welcome Image")
+            li.glide__slide
+              .reasons__card(data-aos="fade-up" data-aos-offset="120" data-aos-delay="150" data-aos-duration="500")
+                +reason-card("#специально для тебя", "Хотите улучшить свою форму и здоровье на дому", "./img/reasons_4", "Welcome Image")
+          .reasons__bullets
+            .glide__bullets(data-glide-el="controls[nav]")
+              .glide__bullet(data-glide-dir='=0')
+              .glide__bullet(data-glide-dir='=1')
+              .glide__bullet(data-glide-dir='=2')
+              .glide__bullet(data-glide-dir='=3')

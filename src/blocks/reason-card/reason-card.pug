@@ -1,0 +1,9 @@
+mixin reason-card(tag, text, imgSrc, imgAlt)
+  .reason-card
+    .reason-card__tag= tag
+    p.reason-card__text= text
+
+    picture.reason-card__pic
+          source(srcset=`${imgSrc}@2x.webp 2x, ${imgSrc}.webp 1x`, type="image/webp")
+          source(srcset=`${imgSrc}@2x.png 2x, ${imgSrc}.png 1x`, type="image/png")
+          img(src=`${imgSrc}.png`, alt="Курс для вас, если..." loading="lazy")

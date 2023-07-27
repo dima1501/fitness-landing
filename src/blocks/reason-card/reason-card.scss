@@ -1,0 +1,64 @@
+.reason-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 20px;
+  padding: 32px 14px;
+  max-width: 323px;
+  min-height: 349px;
+  background: #ffffff;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 7px 11px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 22px;
+
+  @media (min-width: 1024px) {
+    padding: 38px 17px;
+    max-width: 100%;
+    min-height: 365px;
+  }
+
+  @media (min-width: 1280px) {
+    min-height: 415px;
+  }
+
+  &__tag {
+    margin-bottom: 13px;
+    padding: 6px 9px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 132.4%;
+    font-weight: 400;
+    font-style: normal;
+    align-self: flex-start;
+    border-radius: 38px;
+    border: 1px solid #D9D9D9;
+
+    @media (min-width: 768px) {
+      margin-bottom: 18px;
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: 18px;
+      padding: 7px 14px;
+      font-size: 14px;
+      border-radius: 46px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 132.4%;
+    font-weight: 400;
+
+    @media (min-width: 1280px) {
+      padding-right: 18px;
+      font-size: 20px;
+    }
+  }
+
+  &__pic {
+    margin-top: auto;
+
+    img {
+      display: block;
+    }
+  }
+}

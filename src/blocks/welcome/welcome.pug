@@ -1,0 +1,30 @@
+mixin welcome(modifier)
+  section.welcome(data-aos="fade-in" data-aos-delay="100")
+    .welcome__main
+      .welcome__main-content
+        h1.welcome__main-content-title
+          | Получите крепкое и здоровое тело  <br>
+          span за 30 дней  <br>
+          | не выходя из дома!
+
+        p.welcome__main-content-text Станьте лучшей версий себя! Достигните желаемой формы без изнурительных упражнений и диет
+        .welcome__main-content-btn
+          +btn('button', 'js-subscribe')
+
+      .welcome__main-promo
+        img(src="./img/welcome-promo-bg.svg", alt="" loading="lazy")
+
+        picture.welcome__main-promo-pic
+          source(srcset=`./img/welcome-promo-pic@2x.webp 2x, ./img/welcome-promo-pic.webp 1x`, type="image/webp")
+          source(srcset=`./img/welcome-promo-pic@2x.png 2x, ./img/welcome-promo-pic.png 1x`, type="image/png")
+          img(src=`./img/welcome-promo-pic.png`, alt="Welcome Image" loading="lazy")
+
+        .welcome__main-promo-tag Попробуйте первую неделю всего за __Р.
+
+    .welcome__cards 
+      .welcome__cards-item(data-aos="fade-up" data-aos-offset="40")
+        +info-card("./img/info-card_1", "Длительность обучения", "1 месяц")
+      .welcome__cards-item(data-aos="fade-up" data-aos-offset="40" data-aos-delay="100")
+        +info-card("./img/info-card_2", "Формат обучения", "онлайн")
+      .welcome__cards-item(data-aos="fade-up" data-aos-offset="40" data-aos-delay="200")
+        +info-card("./img/info-card_3", "Начало обучения", "в любое время")

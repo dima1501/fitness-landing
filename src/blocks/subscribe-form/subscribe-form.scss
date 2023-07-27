@@ -1,0 +1,28 @@
+.subscribe-form {
+  max-width: 540px;
+
+  &__input {
+    display: block;
+    margin-bottom: 18px;
+    padding: 19px 20px;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    line-height: 132.4%;
+    font-weight: 400;
+    font-style: normal;
+    outline: none;
+    transition: border-color .3s;
+    border-radius: 40px;
+    border: 1px solid #000000;
+
+    @media (min-width: 768px) {
+      padding: 18px 33px 19px 33px;
+      font-size: 20px;
+    }
+
+    &._error {
+      border-color: red;
+    }
+  }
+}

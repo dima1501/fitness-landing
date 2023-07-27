@@ -1,0 +1,21 @@
+mixin results(modifier)
+  section.results
+    .results__top 
+      h2.results__top-title Результаты участников курса
+      .results__arrows
+        .results__arrows-prev.js-results-prev
+        .results__arrows-next.js-results-next
+
+    .glide#results-slider
+      .glide__track(data-glide-el="track")
+        ul.glide__slides
+          li.glide__slide
+            +result-card('results_1', 'Ирина', '“Курс дал мне уверенность в себе и мощную мотивацию, теперь сложно представить свою жизнь без тренировок, о которых узнала на этом курсе. Большое спасибо"')
+          li.glide__slide
+            +result-card('results_2', 'Анна', '“Спасибо за курс! Теперь я получаю удовольствие от тренировок и вижу результаты!”')
+          li.glide__slide
+            +result-card('results_3', 'Елизавета', '“Спасибо за курс! Теперь я получаю удовольствие от тренировок и вижу результаты!”')
+          li.glide__slide
+            +result-card('results_4', 'Дарья', '“Я не люблю заниматься спортом, но этот курс все изменил. Теперь я занимаюсь с удовольствием. Рекомендую всем, кто хочет найти мотивацию для занятий!”')
+      
+      

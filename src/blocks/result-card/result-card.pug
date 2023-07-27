@@ -1,0 +1,9 @@
+mixin result-card(imageName, name, text)
+  .result-card
+    picture.result-card__pic
+      source(srcset=`./img/${imageName}@2x.webp 2x, ./img/${imageName}.webp 1x`, type="image/webp")
+      source(srcset=`./img/${imageName}@2x.png 2x, ./img/${imageName}.png 1x`, type="image/png")
+      img(src=`./img/${imageName}.png`, alt="Welcome Image" loading="lazy")
+    .result-card__content
+      .result-card__name= name
+      p.result-card__text= text

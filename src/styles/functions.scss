@@ -1,0 +1,30 @@
+@use 'sass:math';
+
+$default-min-bp: 320px; // Значение минимальной ширины экрана по умолчанию
+$default-max-bp: 1920px; // Значение максимальной ширины экрана по умолчанию
+
+@function toround($number, $decimals: 0) {
+  $n: 1;
+
+  @if $decimals >0 {
+    @for $i from 1 through $decimals {
+      $n: $n * 10;
+    }
+  }
+
+  @return math.div(math.round($number * $n), $n);
+}
+
+@function px-to-rem($px) {
+  $rems: math.div($px, 16px) * 16px; // Преобразование пикселей в ремы
+  @return $rems;
+}
+
+@function clampy($min-size, $max-size, $min-breakpoint: $default-min-bp, $max-breakpoint: $default-max-bp, $unit: vw) {
+  $slope: math.div($max-size - $min-size, $max-breakpoint - $min-breakpoint); // Расчет наклона для адаптивного изменения размера
+  $slope-to-unit: toround($slope * 100, 2); // Преобразование наклона в проценты
+  $intercept-rem: toround(px-to-rem($min-size - $slope * $min-breakpoint), 2); // Преобразование смещения в ремы
+  $min-size-rem: toround(px-to-rem($min-size), 2); // Преобразование минимального размера в ремы
+  $max-size-rem: toround(px-to-rem($max-size), 2); // Преобразование максимального размера в ремы
+  @return clamp(#{$min-size-rem}, #{$slope-to-unit}#{$unit} + #{$intercept-rem}, #{$max-size-rem}); // Создание CSS-функции clamp для адаптивного размера
+}

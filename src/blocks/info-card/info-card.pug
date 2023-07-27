@@ -1,0 +1,6 @@
+mixin info-card(imagePath, mainText, subText)
+  .info-card
+    img(src=`${imagePath}.svg`, alt="" loading="lazy").info-card__pic
+    p.info-card__text
+      | #{mainText}
+      span #{subText}

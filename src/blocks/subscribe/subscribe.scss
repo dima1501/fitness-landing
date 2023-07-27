@@ -1,0 +1,217 @@
+.subscribe {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 85px;
+  padding: 0 14px;
+  background: rgba(255, 255, 255, 0.40);
+  border-radius: 18px;
+  border: 3px solid #ffffff;
+
+  @media (min-width: 768px) {
+    margin-bottom: 148px;
+    padding: 0 40px;
+    border-radius: 40px;
+    border: 7px solid #ffffff;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    right: -53px;
+    width: 158px;
+    height: 156px;
+    background-image: url('../img/subscribe_decor.svg');
+    background-size: cover;
+    transform: scale(0.37);
+
+    @media (min-width: 425px) {
+      top: 29px;
+      right: -45px;
+      transform: scale(0.47);
+    }
+
+    @media (min-width: 768px) {
+      top: 70px;
+      right: -20px;
+      transform: scale(0.7);
+    }
+
+    @media (min-width: 1024px) {
+      top: 99px;
+      right: -35px;
+    }
+
+    @media (min-width: 1280px) {
+      top: 106px;
+      right: -11px;
+      transform: scale(0.8);
+    }
+
+    @media (min-width: 1366px) {
+      top: 91px;
+      right: 0;
+      transform: none;
+    }
+
+    @media (min-width: 1440px) {
+      right: 27px;
+    }
+  }
+
+  &__promo {
+    position: relative;
+    align-self: center;
+    margin-top: -60px;
+
+    @media (min-width: 768px) {
+      margin-top: -130px;
+      width: 592px;
+    }
+
+    @media (min-width: 1024px) {
+      flex-shrink: 0;
+      margin-top: 0;
+      width: 445px;
+      align-self: flex-end;
+    }
+
+    @media (min-width: 1366px) {
+      width: 615px;
+    }
+
+    &-pic {
+      position: relative;
+      bottom: -42px;
+      display: block;
+      width: 310px;
+
+      @media (min-width: 768px) {
+        bottom: -75px;
+        width: auto;
+      }
+
+      @media (min-width: 1024px) {
+        position: absolute;
+        bottom: -57px;
+        left: 50%;
+        width: 100%;
+        transform: translateX(-50%);
+      }
+
+      @media (min-width: 1366px) {
+        bottom: -75px;
+      }
+    }
+
+    &-pic:after {
+      content: '';
+      position: absolute;
+      top: 36%;
+      left: 5%;
+      width: 50px;
+      height: 50px;
+      background-image: url('../img/star_2.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @media (min-width: 768px) {
+        top: 36%;
+        left: 2%;
+        width: 79px;
+        height: 87px;
+      }
+
+      @media (min-width: 1366px) {
+        top: 40%;
+        left: 5%;
+      }
+    }
+
+    &-pic:before {
+      content: '';
+      position: absolute;
+      top: 56%;
+      right: 6%;
+      width: 35px;
+      height: 41px;
+      background-image: url('../img/star_1.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @media (min-width: 768px) {
+        top: 53%;
+        right: 5%;
+        width: 64px;
+        height: 77px;
+      }
+
+      @media (min-width: 1366px) {
+        right: 10%;
+      }
+    }
+
+    &-note {
+      position: absolute;
+      bottom: 22px;
+      left: 50%;
+      padding: 6px 7px;
+      width: 90%;
+      max-width: 204px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      line-height: 132.4%;
+      font-weight: 500;
+      font-style: normal;
+      color: #ffffff;
+      text-align: center;
+      background: #F23F7F;
+      transform: translateX(-50%);
+      border-radius: 30px;
+
+      @media (min-width: 768px) {
+        bottom: 48px;
+        padding: 10px 47px;
+        max-width: 370px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__content {
+    padding: 26px 0;
+
+    @media (min-width: 768px) {
+      padding: 52px 0;
+      width: 624px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: clampy(17.9px, 40px, 320px, 768px);
+    line-height: 139%;
+
+    @media (min-width: 768px) {
+      margin-bottom: 40px;
+      font-size: clampy(27px, 40px, 768px, 1440px);
+    }
+  }
+
+  &__text {
+    margin-bottom: 32px;
+    font-size: clampy(14px, 20px, 320px, 768px);
+    line-height: 132.4%;
+
+    @media (min-width: 768px) {
+      margin-bottom: 64px;
+      max-width: 573px;
+      font-size: 20px;
+    }
+  }
+}
